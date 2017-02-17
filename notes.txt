@@ -1,0 +1,6 @@
+Use an id for a specific element
+<div id="exampleID">
+#exampleID {}
+Use classes for similar elements
+<div class="exampleClass">
+.exampleClass {}
