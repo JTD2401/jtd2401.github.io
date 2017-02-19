@@ -56,13 +56,48 @@ body {
   background: black;
 }
 
+
 .container {
   position: relative;
   perspective: 800px;
 }
 
+#skillsIcon {
+  width: 40%;
+  height: width;
+  padding: 0;
+  border-radius: 50%;
+  border: 3px solid gray;
+}
+
+.skillsheader {
+  color: #000000;
+  padding: 0px;
+  margin: 0 auto;
+}
+
+.skillsUL {
+    list-style: none;
+    padding-left: 20%;
+    padding-right: 20%;
+    color: #ECF6CE;
+    border-top: 0px;
+    margin-top: 0px;
+}
+
+/*Spacing between each list item*/
+.skillsLI {
+  margin: 2px 0;
+}
+
+.skillsLink {
+  margin: 2px 0;
+  text-decoration: none;
+  color: #ECF6CE;
+}
+
 .card {
-  width: 400px;
+  width: 200px;
   height: 260px;
   position: absolute;;
   transform-style: preserve-3d;
@@ -80,14 +115,14 @@ body {
   text-align: center;
   padding: 5px 0;
   padding-bottom: 5px;
-  border: 2px solid gray;
+  border: 4px solid gray;
 }
 
 .card .front {
-  background: #2B2E4C;
+  background: #44965B;
 }
 .card .back {
-  background: blue;
+  background: #44965B;
   transform: rotateY( 180deg );
 }
 
@@ -96,10 +131,6 @@ body {
   transform: rotateY( 180deg );
 }
 
-/*Spacing between each list item*/
-li {
-  margin: 10px 0;
-}
     </style>
     <!-- Import JQuery -->
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -122,29 +153,40 @@ li {
     </div>
   </section>
 -->
+
   <!--Flip Cards-->
     <section class="container">
-      <!--First Card-->
+      <!--Skills Card-->
       <div class="card">
-        <!-- Front of First Card-->
+        <!-- Front of Skills Card-->
         <figure class="front">
-          <h1>Skills</h1>
-          <ul>
-            <li>C# (2 Semesters)</li>
-            <li>Python (Familiar)</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Javascript</li>
+          <!--Skills Icon-->
+          <img src="mahface.jpg" id="skillsIcon"></img>
+          <h1 class="skillsheader">Skills</h1>
+          <ul class="skillsUL">
+            <li class="skillsLI">C# (2 Semesters)</li>
+            <li class="skillsLI">Python (Familiar)</li>
+            <li class="skillsLI">HTML</li>
+            <li class="skillsLI">CSS</li>
+            <li class="skillsLI">Javascript</li>
           </ul>
         </figure>
-        <!-- Back of first card-->
-        <figure class="back">Wow, would'ya look at dem skills</figure>
+        <!-- Back of Skills Card-->
+        <figure class="back">
+          <h3>Projects</h3>
+            <ul class="skillsUL">
+              <li class="skillsLI"><a href="index.html" class="skillsLink">More to come</a></li>
+              <li class="skillsLI"><a href="index.html" class="skillsLink">More to come</a></li>
+              <li class="skillsLI"><a href="index.html" class="skillsLink">More to come</a></li>
+              <li class="skillsLI"><a href="index.html" class="skillsLink">More to come</a></li>
+        </figure>
       </div>
     </section>
   <!--JavaScript-->
   <script>
   //carousel
 //var tz = Math.round( ( 210 / 2 ) / Math.tan( Math.PI / 9 ) );
+
   //Toggles flipped class from <style> for flipcards
   $( "div.card" ).click(function() {
   $( this ).toggleClass( "flipped" );
