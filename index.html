@@ -5,254 +5,207 @@
     <title>James DiGrazia's Personal Website</title>
     <!--CSS-->
     <style>
-    /*
-.caro-container {
-  width: 210px;
-  height: 140px;
-  position: relative;
-  perspective: 1000px;
-}
+        body {
+            border: 0;
+            margin: 0;
+            background: black;
+        }
 
-#carousel {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  transform-style: preserve-3d;
-}
+        #topBar {
+            width: 100%;
+            height: 10%;
+            background: orange;
+            margin: 0;
+            border: 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
 
-#carousel figure {
-  margin: 0px;
-  display: block;
-  position: absolute;
-  width: 186px;
-  height: 116px;
-  left: 10px;
-  top: 10px;
-  border: 2px solid black;
-}
+        #topButtonUL {
+            height: 100%;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            list-style-type: none;
+        }
 
-#carousel figure:nth-child(1) { transform: rotateY(   0deg ); }
-#carousel figure:nth-child(2) { transform: rotateY(  40deg ); }
-#carousel figure:nth-child(3) { transform: rotateY(  80deg ); }
-#carousel figure:nth-child(4) { transform: rotateY( 120deg ); }
-#carousel figure:nth-child(5) { transform: rotateY( 160deg ); }
-#carousel figure:nth-child(6) { transform: rotateY( 200deg ); }
-#carousel figure:nth-child(7) { transform: rotateY( 240deg ); }
-#carousel figure:nth-child(8) { transform: rotateY( 280deg ); }
-#carousel figure:nth-child(9) { transform: rotateY( 320deg ); }
+        .buttonLink {
 
-#carousel figure:nth-child(1) { transform: rotateY(   0deg ) translateZ( 288px ); }
-#carousel figure:nth-child(2) { transform: rotateY(  40deg ) translateZ( 288px ); }
-#carousel figure:nth-child(3) { transform: rotateY(  80deg ) translateZ( 288px ); }
-#carousel figure:nth-child(4) { transform: rotateY( 120deg ) translateZ( 288px ); }
-#carousel figure:nth-child(5) { transform: rotateY( 160deg ) translateZ( 288px ); }
-#carousel figure:nth-child(6) { transform: rotateY( 200deg ) translateZ( 288px ); }
-#carousel figure:nth-child(7) { transform: rotateY( 240deg ) translateZ( 288px ); }
-#carousel figure:nth-child(8) { transform: rotateY( 280deg ) translateZ( 288px ); }
-#carousel figure:nth-child(9) { transform: rotateY( 320deg ) translateZ( 288px ); }
+        }
 
-*/
+        .topButton {
+            background: gray;
+            width: 20vw;
+            height: 100%;
+            text-align: center;
+            float: left;
+            display: block;
+            font-family: courier;
+            font-weight: bold;
+        }
 
-body {
-  border: 0;
-  margin: 0;
-  background: black;
-}
+        .topButton.hovered {
+            background: red;
+        }
 
-#topBar {
-  width: 100%;
-  height: 50px;
-  background: orange;
-  margin: 0;
-  border: 0;
-  padding-left: 0;
-  padding-right: 0;
-}
+        .container {
+            position: relative;
+            top: 20px;
+            perspective: 800px;
+        }
 
-#topButtonUL {
-  height: 100%;
-  padding: 0;
-  border: 0;
-  margin: 0;
-  list-style-type: none;
-}
+        #skillsIcon {
+            width: 40%;
+            height: width;
+            padding: 0;
+            border-radius: 50%;
+            border: 3px solid gray;
+        }
 
-.topButton {
-  background: red;
-  width: 20vw;
-  height: 100%;
-  text-align: center;
-  float: left;
-  display: block;
-}
+        .skillsheader {
+            color: #000000;
+            padding: 0px;
+            margin: 0 auto;
+        }
 
-.buttonLink {
+        .skillsUL {
+            list-style: none;
+            padding-left: 20%;
+            padding-right: 20%;
+            color: #ECF6CE;
+            border-top: 0px;
+            margin-top: 0px;
+        }
 
-}
+        /*Spacing between each list item in skills card*/
+        .skillsLI {
+            margin: 2px 0;
+        }
 
-.container {
-  position: relative;
-  perspective: 800px;
-}
+        .skillsLink {
+            margin: 2px 0;
+            text-decoration: none;
+            color: #ECF6CE;
+        }
 
-#skillsIcon {
-  width: 40%;
-  height: width;
-  padding: 0;
-  border-radius: 50%;
-  border: 3px solid gray;
-}
+        .card {
+            width: 200px;
+            height: 260px;
+            position: absolute;
+            ;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+        }
 
-.skillsheader {
-  color: #000000;
-  padding: 0px;
-  margin: 0 auto;
-}
+        .card figure {
+            margin: 0;
+            display: block;
+            position: absolute;
+            ;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 25px;
+            text-align: center;
+            padding: 5px 0;
+            padding-bottom: 5px;
+            border: 4px solid gray;
+        }
 
-.skillsUL {
-    list-style: none;
-    padding-left: 20%;
-    padding-right: 20%;
-    color: #ECF6CE;
-    border-top: 0px;
-    margin-top: 0px;
-}
+        .card .front {
+            background: #44965B;
+        }
 
-/*Spacing between each list item*/
-.skillsLI {
-  margin: 2px 0;
-}
+        .card .back {
+            background: #44965B;
+            transform: rotateY( 180deg);
+        }
+        /*First Card Flipped Class*/
 
-.skillsLink {
-  margin: 2px 0;
-  text-decoration: none;
-  color: #ECF6CE;
-}
-
-.card {
-  width: 200px;
-  height: 260px;
-  position: absolute;;
-  transform-style: preserve-3d;
-  transition: transform 1s;
-}
-
-.card figure {
-  margin: 0;
-  display: block;
-  position: absolute;;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 25px;
-  text-align: center;
-  padding: 5px 0;
-  padding-bottom: 5px;
-  border: 4px solid gray;
-}
-
-.card .front {
-  background: #44965B;
-}
-.card .back {
-  background: #44965B;
-  transform: rotateY( 180deg );
-}
-
-/*First Card Flipped Class*/
-.card.flipped {
-  transform: rotateY( 180deg );
-}
-
+        .card.flipped {
+            transform: rotateY( 180deg);
+        }
     </style>
     <!-- Import JQuery -->
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <body>
-  <!--Carousel-->
-  <!--
-  <section class="caro-container">
-    <div id="carousel">
-      <figure>1<figure>
-      <figure>2<figure>
-      <figure>3<figure>
-      <figure>4<figure>
-      <figure>5<figure>
-      <figure>6<figure>
-      <figure>7<figure>
-      <figure>8<figure>
-      <figure>9<figure>
-    </div>
-  </section>
--->
-  <section id="topBar">
-    <ul id="topButtonUL">
-      <!--Home Button-->
-      <li class="topButton">
-        <!--Still needs good image for Home LI -->
-        <a href="index.html" class="buttonLink">Home</a>
-      </li>
-      <!--Projects Button-->
-      <li class="topButton">
-        <a href="index.html" class="buttonLink">Projects</a>
-      </li>
-      <!--Skills Button-->
-      <li class="topButton">
-        <a href="index.html" class="buttonLink">Skills</a>
-      </li>
-      <!--Experience Button-->
-      <li class="topButton">
-        <a href="index.html" class="buttonLink">Experience</a>
-      </li>
-      <!--Random Button-->
-      <li class="topButton">
-        <a href="index.html" class="buttonLink">Random</a>
-      </li>
-    </ul>
-  </section>
-  <!--Flip Cards-->
-    <section class="container">
-      <!--Skills Card-->
-      <div class="card">
-        <!-- Front of Skills Card-->
-        <figure class="front">
-          <!--Skills Icon-->
-          <img src="mahface.jpg" id="skillsIcon"></img>
-          <h1 class="skillsheader">Skills</h1>
-          <ul class="skillsUL">
-            <li class="skillsLI">C# (2 Semesters)</li>
-            <li class="skillsLI">Python (Familiar)</li>
-            <li class="skillsLI">HTML</li>
-            <li class="skillsLI">CSS</li>
-            <li class="skillsLI">Javascript</li>
-          </ul>
-        </figure>
-        <!-- Back of Skills Card-->
-        <figure class="back">
-          <h3>Projects</h3>
-            <ul class="skillsUL">
-              <li class="skillsLI"><a href="index.html"
-                class="skillsLink">More to come</a></li>
-              <li class="skillsLI"><a href="index.html"
-                class="skillsLink">More to come</a></li>
-              <li class="skillsLI"><a href="index.html"
-                class="skillsLink">More to come</a></li>
-              <li class="skillsLI"><a href="index.html"
-                class="skillsLink">More to come</a></li>
-        </figure>
-      </div>
+    <section id="topBar">
+        <ul id="topButtonUL">
+            <!--Home Button-->
+            <a href="index.html" class="buttonLink">
+                <li class="topButton">
+                    <!--Still needs good image for Home LI -->
+                    Home
+                </li>
+            </a>
+            <!--Projects Button-->
+            <a href="index.html" class="buttonLink">
+                <li class="topButton">
+                    Projects
+                </li>
+            </a>
+            <!--Skills Button-->
+            <a href="index.html" class="buttonLink">
+                <li class="topButton">
+                    Skills
+                </li>
+            </a>
+            <!--Experience Button-->
+            <a href="index.html" class="buttonLink">
+                <li class="topButton">
+                    Experience
+                </li>
+            </a>
+            <!--Random Button-->
+            <a href="index.html" class="buttonLink">
+                <li class="topButton">
+                    Random
+                </li>
+            </a>
+        </ul>
     </section>
-  <!--JavaScript-->
-  <script>
-  //carousel
-//var tz = Math.round( ( 210 / 2 ) / Math.tan( Math.PI / 9 ) );
-
-  //Toggles flipped class from <style> for flipcards
-  $( "div.card" ).click(function() {
-  $( this ).toggleClass( "flipped" );
-});
-  </script>
+    <!--Flip Cards-->
+    <section class="container">
+        <!--Skills Card-->
+        <div class="card">
+            <!-- Front of Skills Card-->
+            <figure class="front">
+                <!--Skills Icon-->
+                <img src="mahface.jpg" id="skillsIcon"></img>
+                <h1 class="skillsheader">Skills</h1>
+                <ul class="skillsUL">
+                    <li class="skillsLI">C# (2 Semesters)</li>
+                    <li class="skillsLI">Python (Familiar)</li>
+                    <li class="skillsLI">HTML</li>
+                    <li class="skillsLI">CSS</li>
+                    <li class="skillsLI">Javascript</li>
+                </ul>
+            </figure>
+            <!-- Back of Skills Card-->
+            <figure class="back">
+                <h3>Projects</h3>
+                <ul class="skillsUL">
+                    <li class="skillsLI"><a href="index.html" class="skillsLink">More to come</a></li>
+                    <li class="skillsLI"><a href="index.html" class="skillsLink">More to come</a></li>
+                    <li class="skillsLI"><a href="index.html" class="skillsLink">More to come</a></li>
+                    <li class="skillsLI"><a href="index.html" class="skillsLink">More to come</a></li>
+                </ul>
+            </figure>
+        </div>
+    </section>
+    <!--JavaScript-->
+    <script>
+        //Pretty effect to top bar buttons on hover
+        $("div.topButton").hover(function() {
+            $(this).toggleClass("hovered");
+        });
+        //Toggles flipped class from <style> for flipcards
+        $("div.card").click(function() {
+            $(this).toggleClass("flipped");
+        });
+    </script>
 </body>
 
 </html>
