@@ -44,8 +44,38 @@
             font-weight: bold;
         }
 
-        .topButton.hovered {
-            background: red;
+        /*Top bar buttons during click*/
+        .buttonLink:active {
+          color: black;
+        }
+
+        /*Hover effects for top bar buttons*/
+        .buttonLink:hover > li {
+          background: #564592;
+        }
+
+        #homeButton {
+
+        }
+
+        #projectsButton {
+
+        }
+
+        #projectsButton:hover, .dropbtn:focus {
+          background: red;
+        }
+
+        #skillsButton {
+
+        }
+
+        #experienceButton {
+
+        }
+
+        #randomButton {
+
         }
 
         .container {
@@ -120,8 +150,8 @@
             background: #44965B;
             transform: rotateY( 180deg);
         }
-        /*First Card Flipped Class*/
 
+        /*First Card Flipped Class*/
         .card.flipped {
             transform: rotateY( 180deg);
         }
@@ -134,32 +164,32 @@
     <section id="topBar">
         <ul id="topButtonUL">
             <!--Home Button-->
-            <a href="index.html" class="buttonLink">
+            <a href="index.html" class="buttonLink" id="homeButton">
                 <li class="topButton">
                     <!--Still needs good image for Home LI -->
                     Home
                 </li>
             </a>
             <!--Projects Button-->
-            <a href="index.html" class="buttonLink">
+            <a href="index.html" class="buttonLink" id="projectsButton">
                 <li class="topButton">
                     Projects
                 </li>
             </a>
             <!--Skills Button-->
-            <a href="index.html" class="buttonLink">
+            <a href="index.html" class="buttonLink" id="skillsButton">
                 <li class="topButton">
                     Skills
                 </li>
             </a>
             <!--Experience Button-->
-            <a href="index.html" class="buttonLink">
+            <a href="index.html" class="buttonLink" id="experienceButton">
                 <li class="topButton">
                     Experience
                 </li>
             </a>
             <!--Random Button-->
-            <a href="index.html" class="buttonLink">
+            <a href="index.html" class="buttonLink" id="randomButton">
                 <li class="topButton">
                     Random
                 </li>
@@ -197,10 +227,6 @@
     </section>
     <!--JavaScript-->
     <script>
-        //Pretty effect to top bar buttons on hover
-        $("div.topButton").hover(function() {
-            $(this).toggleClass("hovered");
-        });
         //Toggles flipped class from <style> for flipcards
         $("div.card").click(function() {
             $(this).toggleClass("flipped");
