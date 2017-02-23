@@ -29,9 +29,7 @@
             list-style-type: none;
         }
 
-        .buttonLink {
-
-        }
+        .buttonLink {}
 
         .topButton {
             background: gray;
@@ -42,45 +40,55 @@
             display: block;
             font-family: courier;
             font-weight: bold;
+            font-size: 1em;
         }
-
         /*Top bar buttons during click*/
+
         .buttonLink:active {
-          color: black;
+            color: black;
         }
-
         /*Hover effects for top bar buttons*/
-        .buttonLink:hover > li {
-          background: #564592;
-        }
 
-        #homeButton {
-
+        .buttonLink:hover>li {
+            background: #564592;
+            text-shadow: white 0.1em 0.1em 0.2em;
         }
 
         #projectsButton {
-
+            position: relative;
+            display: inline-block;
         }
 
-        #projectsButton:hover, .dropbtn:focus {
-          background: red;
+        .projectsButton-content {
+            display: none;
+            position: absolute;
+            width: 100%;
+            border-top: 0;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         }
 
-        #skillsButton {
-
+        #projectsButton:hover .projectsButton-content {
+            display: block;
+            background: gray;
         }
 
-        #experienceButton {
-
+        .projectsButton-content:hover {
+            text-shadow: white 0.1em 0.1em 0.2em;
         }
 
-        #randomButton {
+        #homeButton {}
 
-        }
+        #projectsButton {}
+
+        #skillsButton {}
+
+        #experienceButton {}
+
+        #randomButton {}
 
         .container {
             position: relative;
-            top: 20px;
+            top: 100px;
             perspective: 800px;
         }
 
@@ -106,8 +114,8 @@
             border-top: 0px;
             margin-top: 0px;
         }
-
         /*Spacing between each list item in skills card*/
+
         .skillsLI {
             margin: 2px 0;
         }
@@ -150,8 +158,8 @@
             background: #44965B;
             transform: rotateY( 180deg);
         }
-
         /*First Card Flipped Class*/
+
         .card.flipped {
             transform: rotateY( 180deg);
         }
@@ -171,9 +179,12 @@
                 </li>
             </a>
             <!--Projects Button-->
-            <a href="index.html" class="buttonLink" id="projectsButton">
-                <li class="topButton">
+            <a href="index.html" class="buttonLink">
+                <li class="topButton" id="projectsButton">
                     Projects
+                    <div class="projectsButton-content">
+                      <p> Meh. </p>
+                    </div>
                 </li>
             </a>
             <!--Skills Button-->
