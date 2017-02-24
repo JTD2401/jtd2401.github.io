@@ -11,6 +11,11 @@
             background: black;
         }
 
+        /*Hides scrollbar, but enables scrolling*/
+        ::-webkit-scrollbar {
+          display: none;
+        }
+
         #topBar {
             width: 100%;
             height: 10%;
@@ -29,7 +34,10 @@
             list-style-type: none;
         }
 
-        .buttonLink {}
+        .buttonLink {
+          text-decoration: none;
+          font-size: 1em;
+        }
 
         .topButton {
             background: gray;
@@ -42,13 +50,13 @@
             font-weight: bold;
             font-size: 1em;
         }
-        /*Top bar buttons during click*/
 
+        /*Top bar buttons during click*/
         .buttonLink:active {
             color: black;
         }
-        /*Hover effects for top bar buttons*/
 
+        /*Hover effects for top bar buttons*/
         .buttonLink:hover>li {
             background: #564592;
             text-shadow: white 0.1em 0.1em 0.2em;
@@ -57,6 +65,7 @@
         #projectsButton {
             position: relative;
             display: inline-block;
+            text-decoration: none;
         }
 
         .projectsButton-content {
@@ -67,13 +76,44 @@
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         }
 
+        /*links in projects button dropdown*/
+        .projectsButton-content a {
+          text-decoration: none;
+          text-shadow: none;
+        }
+
+        /*Links in projects button dropdown WHEN HOVERED ON*/
+        .projectsButton-content a:hover {
+          text-shadow: white 0.1em 0.1em 0.2em;
+        }
+
+        /*Projects boxes when they are hovered*/
+        .projectsButton-content a:hover p{
+          background: darkgray;
+        }
+
+        /*Projects button when it is hovered*/
+        #projectsButton:hover {
+          background: #564592;
+          text-shadow: white 0.1em 0.1em 0.2em;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          text-decoration: none;
+        }
+
+        /*Projects dropdown when projects button is hovered*/
         #projectsButton:hover .projectsButton-content {
             display: block;
             background: gray;
+            text-shadow: white 0.1em 0.1em 0.2em;;
         }
 
-        .projectsButton-content:hover {
-            text-shadow: white 0.1em 0.1em 0.2em;
+        /*Projects button dropdown boxes when projects button is hovered*/
+        #projectsButton:hover .projectsButton-content p{
+            width: 100%;
+            length: 100%;
+            padding: 0;
+            border: 0;
+            margin: 0;
         }
 
         #homeButton {}
@@ -84,84 +124,89 @@
 
         #experienceButton {}
 
-        #randomButton {}
+        #galleryButton {}
+
+        .midSection {
+          width: 100vw;
+          height: 280px;
+          background: white;
+          padding-top: 10%;
+        }
 
         .container {
-            position: relative;
-            top: 100px;
-            perspective: 800px;
+          position: relative;
+          top: 100px;
+          perspective: 800px;
         }
 
         #skillsIcon {
-            width: 40%;
-            height: width;
-            padding: 0;
-            border-radius: 50%;
-            border: 3px solid gray;
+          width: 40%;
+          height: width;
+          padding: 0;
+          border-radius: 50%;
+          border: .25em solid gray;
         }
 
         .skillsheader {
-            color: #000000;
-            padding: 0px;
-            margin: 0 auto;
+          color: #000000;
+          padding: 0;
+          margin: 0 auto;
         }
 
         .skillsUL {
-            list-style: none;
-            padding-left: 20%;
-            padding-right: 20%;
-            color: #ECF6CE;
-            border-top: 0px;
-            margin-top: 0px;
+          list-style: none;
+          padding-left: 20%;
+          padding-right: 20%;
+          color: #ECF6CE;
+          border-top: 0;
+          margin-top: 0;
         }
-        /*Spacing between each list item in skills card*/
 
+        /*Spacing between each list item in skills card*/
         .skillsLI {
-            margin: 2px 0;
+          margin: .20em 0;
         }
 
         .skillsLink {
-            margin: 2px 0;
-            text-decoration: none;
-            color: #ECF6CE;
+          margin: .20em 0;
+          text-decoration: none;
+          color: #ECF6CE;
         }
 
         .card {
-            width: 200px;
-            height: 260px;
-            position: absolute;
-            ;
-            transform-style: preserve-3d;
-            transition: transform 1s;
+          width: 200px;
+          height: 260px;
+          position: absolute;
+          transform-style: preserve-3d;
+          transition: transform 1s;
         }
 
         .card figure {
-            margin: 0;
-            display: block;
-            position: absolute;
-            ;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            border-radius: 25px;
-            text-align: center;
-            padding: 5px 0;
-            padding-bottom: 5px;
-            border: 4px solid gray;
+          margin: 0;
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+          border-radius: 25px;
+          text-align: center;
+          padding: 5px 0;
+          padding-bottom: 5px;
+          border: 4px solid gray;
         }
 
         .card .front {
-            background: #44965B;
+          background: #44965B;
         }
 
         .card .back {
-            background: #44965B;
-            transform: rotateY( 180deg);
+          background: #44965B;
+          transform: rotateY( 180deg);
         }
-        /*First Card Flipped Class*/
 
+        /*First Card Flipped Class*/
         .card.flipped {
-            transform: rotateY( 180deg);
+          transform: rotateY( 180deg);
         }
     </style>
     <!-- Import JQuery -->
@@ -183,7 +228,9 @@
                 <li class="topButton" id="projectsButton">
                     Projects
                     <div class="projectsButton-content">
-                      <p> Meh. </p>
+                      <a href="index.html"><p> Meh </p></a>
+                      <a href="index.html"><p> Meh </p></a>
+                      <a href="index.html"><p> Meh </p></a>
                     </div>
                 </li>
             </a>
@@ -200,12 +247,15 @@
                 </li>
             </a>
             <!--Random Button-->
-            <a href="index.html" class="buttonLink" id="randomButton">
+            <a href="index.html" class="buttonLink" id="galleryButton">
                 <li class="topButton">
-                    Random
+                    Gallery
                 </li>
             </a>
         </ul>
+    </section>
+    <section class="midSection">
+
     </section>
     <!--Flip Cards-->
     <section class="container">
