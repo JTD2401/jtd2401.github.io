@@ -11,7 +11,7 @@
             background: black;
         }
 
-        /*Hides scrollbar, but enables scrolling*/
+        /*Hides scrollbar, but enables scrolling IN CHROME*/
         ::-webkit-scrollbar {
           display: none;
         }
@@ -39,6 +39,7 @@
           font-size: 1em;
         }
 
+        /*All top button li*/
         .topButton {
             background: gray;
             width: 20vw;
@@ -62,12 +63,20 @@
             text-shadow: white 0.1em 0.1em 0.2em;
         }
 
+        /*Home button styles*/
+        #homeButton {
+
+        }
+
+        /*Projects button styles*/
         #projectsButton {
             position: relative;
             display: inline-block;
             text-decoration: none;
+            word-wrap: break-word;
         }
 
+        /*Projects dropdown boxes styling*/
         .projectsButton-content {
             display: none;
             position: absolute;
@@ -76,8 +85,9 @@
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         }
 
-        /*links in projects button dropdown*/
+        /*Links in projects button dropdown*/
         .projectsButton-content a {
+          word-wrap: break-word;
           text-decoration: none;
           text-shadow: none;
         }
@@ -116,15 +126,20 @@
             margin: 0;
         }
 
-        #homeButton {}
+        /*Skills button styles*/
+        #skillsButton {
 
-        #projectsButton {}
+        }
 
-        #skillsButton {}
+        /*Eperience button styles*/
+        #experienceButton {
 
-        #experienceButton {}
+        }
 
-        #galleryButton {}
+        /*Gallery button styles*/
+        #galleryButton {
+
+        }
 
         .midSection {
           width: 100vw;
@@ -133,12 +148,14 @@
           padding-top: 10%;
         }
 
+        /*Flip card container*/
         .container {
           position: relative;
           top: 100px;
           perspective: 800px;
         }
 
+        /*Picture in flipcard*/
         #skillsIcon {
           width: 40%;
           height: width;
@@ -147,12 +164,14 @@
           border: .25em solid gray;
         }
 
+        /*Header in flip card*/
         .skillsheader {
           color: #000000;
           padding: 0;
           margin: 0 auto;
         }
 
+        /*List of skills in flipcard*/
         .skillsUL {
           list-style: none;
           padding-left: 20%;
@@ -160,6 +179,8 @@
           color: #ECF6CE;
           border-top: 0;
           margin-top: 0;
+          font-size: 1em;
+          word-wrap: break-word;
         }
 
         /*Spacing between each list item in skills card*/
@@ -167,12 +188,14 @@
           margin: .20em 0;
         }
 
+        /*Links on back of skills flipcard*/
         .skillsLink {
           margin: .20em 0;
           text-decoration: none;
           color: #ECF6CE;
         }
 
+        /*Flip card styles*/
         .card {
           width: 200px;
           height: 260px;
@@ -181,6 +204,7 @@
           transition: transform 1s;
         }
 
+        /*Flip card styles applied to each side*/
         .card figure {
           margin: 0;
           display: block;
@@ -195,10 +219,12 @@
           border: 4px solid gray;
         }
 
+        /*Front of skills flipcard*/
         .card .front {
           background: #44965B;
         }
 
+        /*Back of skills flipcard*/
         .card .back {
           background: #44965B;
           transform: rotateY( 180deg);
@@ -208,12 +234,14 @@
         .card.flipped {
           transform: rotateY( 180deg);
         }
+
     </style>
     <!-- Import JQuery -->
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <body>
+  <!-- Top Bar -->
     <section id="topBar">
         <ul id="topButtonUL">
             <!--Home Button-->
@@ -228,9 +256,9 @@
                 <li class="topButton" id="projectsButton">
                     Projects
                     <div class="projectsButton-content">
-                      <a href="index.html"><p> Meh </p></a>
-                      <a href="index.html"><p> Meh </p></a>
-                      <a href="index.html"><p> Meh </p></a>
+                      <a href="index.html"><p> Project 1 </p></a>
+                      <a href="index.html"><p> Project 2 </p></a>
+                      <a href="index.html"><p> Project 3 </p></a>
                     </div>
                 </li>
             </a>
@@ -254,9 +282,11 @@
             </a>
         </ul>
     </section>
-    <section class="midSection">
 
-    </section>
+    <!-- Mid Section -->
+    <div class="midSection">
+    </div>
+
     <!--Flip Cards-->
     <section class="container">
         <!--Skills Card-->
