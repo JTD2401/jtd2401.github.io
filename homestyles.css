@@ -11,12 +11,14 @@ body {
 
 #topBar {
     width: 100%;
-    height: 10%;
     background: orange;
     margin: 0;
     border: 0;
     padding-left: 0;
     padding-right: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 #topButtonUL {
@@ -134,11 +136,22 @@ body {
 
 }
 
+
+
 .midSection {
-  width: 100vw;
-  height: 280px;
-  background: white;
-  padding-top: 10%;
+  color: blue;
+  width:  100%;
+  margin: 30px auto 0 auto;
+  text-align: center;
+}
+
+.slick-prev {
+  left: 5px;
+  z-index: 99;
+}
+.slick-next {
+  right: 5px;
+  z-index: 99;
 }
 
 /*Flip card container*/
