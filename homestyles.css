@@ -73,6 +73,7 @@ body {
 
 /*Projects dropdown boxes styling*/
 .projectsButton-content {
+    z-index: 100;
     display: none;
     position: absolute;
     width: 100%;
