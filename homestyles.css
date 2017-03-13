@@ -60,7 +60,6 @@ body {
 
 /*Home button styles*/
 #homeButton {
-
 }
 
 /*Projects button styles*/
@@ -122,18 +121,16 @@ body {
     margin: 0;
 }
 
-/*Skills button styles*/
-#skillsButton {
-
-}
-
-/*Eperience button styles*/
-#experienceButton {
-
+/*Resume button styles*/
+#resumeButton {
 }
 
 /*Gallery button styles*/
-#galleryButton {
+#galleryButton {}
+}
+
+/*Random button styles*/
+#randomButton {
 
 }
 
@@ -141,17 +138,28 @@ body {
 
 .midSection {
   color: blue;
-  width:  100%;
+  width:  30%;
   margin: 30px auto 0 auto;
   text-align: center;
+  font-family: Inconsolata;
+  height: 10px;
+}
+
+.midSection i{
+  height: 40%;
+  display: block;
+  margin: auto;
+  width: 40%;
+  color: gray;
 }
 
 .slick-prev {
-  left: 5px;
+  left: -25px;
   z-index: 99;
 }
+
 .slick-next {
-  right: 5px;
+  right: -25px;
   z-index: 99;
 }
 
@@ -176,6 +184,7 @@ body {
   color: #000000;
   padding: 0;
   margin: 0 auto;
+  font-family: Pacifico;
 }
 
 /*List of skills in flipcard*/
@@ -187,7 +196,9 @@ body {
   border-top: 0;
   margin-top: 0;
   font-size: 1em;
+  overflow: hidden;
   word-wrap: break-word;
+  font-family: Inconsolata;
 }
 
 /*Spacing between each list item in skills card*/
@@ -200,6 +211,10 @@ body {
   margin: .20em 0;
   text-decoration: none;
   color: #ECF6CE;
+}
+
+.skillsLink.hover {
+  text-decoration: none;
 }
 
 /*Flip card styles*/
@@ -240,4 +255,11 @@ body {
 /*First Card Flipped Class*/
 .card.flipped {
   transform: rotateY( 180deg);
+}
+
+/*Media query to make flipcard work on mobile*/
+@media only screen and (max-width: 500px) {
+    body {
+
+    }
 }

@@ -1,16 +1,12 @@
-//Toggles flipped class from <style> for flipcards
-$("div.card").click(function() {
-    $(this).toggleClass("flipped");
-});
-
 //slideshow
 //Initialize slick
 $(document).ready(function() {
   $('.midSection').slick({
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1000,
-    arrows: true
+    autoplaySpeed: 3000,
+    arrows: true,
+    draggable: true
   });
 });

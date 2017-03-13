@@ -1,0 +1,106 @@
+body {
+  background: black;
+}
+
+/*Flip card container*/
+.container {
+  position: relative;
+  left: 10px;
+  perspective: 800px;
+}
+
+/*Picture in flipcard*/
+#skillsIcon {
+  width: 40%;
+  height: width;
+  padding: 0;
+  border-radius: 50%;
+  border: .25em solid gray;
+}
+
+/*Header in flip card*/
+.skillsheader {
+  color: #000000;
+  padding: 0;
+  margin: 0 auto;
+  font-family: Pacifico;
+}
+
+/*List of skills in flipcard*/
+.skillsUL {
+  list-style: none;
+  padding-left: 20%;
+  padding-right: 20%;
+  color: #ECF6CE;
+  border-top: 0;
+  margin-top: 0;
+  font-size: 1em;
+  word-wrap: break-word;
+  font-family: Inconsolata;
+}
+
+/*Spacing between each list item in skills card*/
+.skillsLI {
+  margin: .20em 0;
+}
+
+/*Links on back of skills flipcard*/
+.skillsLink {
+  margin: .20em 0;
+  text-decoration: none;
+  color: #ECF6CE;
+}
+
+.skillsLink.hover {
+  text-decoration: none;
+}
+
+/*Flip card styles*/
+.card {
+  width: 200px;
+  height: 260px;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+/*Flip card styles applied to each side*/
+.card figure {
+  margin: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 25px;
+  text-align: center;
+  padding: 5px 0;
+  padding-bottom: 5px;
+  border: 4px solid gray;
+}
+
+/*Front of skills flipcard*/
+.card .front {
+  background: #44965B;
+}
+
+/*Back of skills flipcard*/
+.card .back {
+  background: #44965B;
+  transform: rotateY( 180deg);
+}
+
+/*First Card Flipped Class*/
+.card.flipped {
+  transform: rotateY( 180deg);
+}
+
+#returnLink {
+  position: absolute;
+  top: 300px;
+  left: 20px;
+  text-decoration: none;
+  color: cyan;
+  font-family: Inconsolata;
+  font-size: 2em;
+}
