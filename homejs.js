@@ -1,7 +1,7 @@
 //slideshow
 //Initialize slick
 $(document).ready(function() {
-  $('.midSection').slick({
+  $('.socialMedia').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,

@@ -161,6 +161,36 @@ body {
   z-index: 99;
 }
 
+#flipLink {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+}
+
+#keyframesLink {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+}
+
+#parallaxLink {
+  position: absolute;
+  top: 70px;
+  left: 10px;
+}
+
+#animistaLink {
+  position: absolute;
+  top: 90px;
+  left: 10px;
+}
+
+#bootstrapLink {
+  position: absolute;
+  top: 110px;
+  left: 10px;
+}
+
 /*Media query to make flipcard work on mobile*/
 @media only screen and (max-width: 500px) {
     body {

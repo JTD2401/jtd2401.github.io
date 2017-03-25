@@ -1,0 +1,36 @@
+/*Mobile styles*/
+body {
+  background: black;
+}
+
+.panel {
+  width: 100%;
+}
+
+#returnLink {
+  position: absolute;
+  top: 300px;
+  left: 20px;
+  text-decoration: none;
+  color: cyan;
+  font-family: Inconsolata;
+  font-size: 2em;
+}
+
+/* Change style for tablets*/
+@media only screen and (min-width : 600px) {
+
+  .panel {
+    width: 33%;
+  }
+
+}
+
+/* Change style for desktop*/
+@media only screen and (max-width : 768px) {
+
+  .panel {
+    width: 25%;
+  }
+
+}
