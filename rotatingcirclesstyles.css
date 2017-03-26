@@ -32,7 +32,6 @@ body {
 }
 
 #shuttle{
-	transform: rotate(270deg);
 	position: relative;
 	width: 50%;
 	top: 25%;
