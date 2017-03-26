@@ -10,3 +10,12 @@ $(document).ready(function() {
     draggable: true
   });
 });
+
+function barHeight() {
+$( "#bar" ).each(function() {
+  $( "#bar" ).height($("#c1").height() + 50);
+  });
+  window.setTimeout(barHeight, 100);
+}
+
+barHeight();

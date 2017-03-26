@@ -1,0 +1,128 @@
+body {
+  background: black;
+}
+
+#bar {
+	width: 100%;
+	height: 1500px;
+	background: gray;
+}
+
+#c1 {
+    position: absolute;
+		left: 10%;
+		top: 10%;
+    width:    10%; /* desired width */
+}
+
+#c1:before {
+    content:     "";
+    display:     block;
+    padding-top: 100%; /* initial ratio of 1:1*/
+}
+
+#c1inner {
+    position: absolute;
+    top:      0;
+    left:     0;
+    bottom:   0;
+    right:    0;
+		background: white;
+		border-radius: 100%;
+}
+
+#shuttle{
+	transform: rotate(270deg);
+	position: relative;
+	width: 50%;
+	top: 25%;
+	left: 25%;
+}
+
+#c1inner:hover #shuttle {
+	animation: fullcircle 2.5s ease infinite;
+}
+
+#c2 {
+		left: 40%;
+    top: 10%;
+		position: absolute;
+    width:    10%; /* desired width */
+}
+
+#c2:before {
+    content:     "";
+    display:     block;
+    padding-top: 100%; /* initial ratio of 1:1*/
+}
+
+#c2inner {
+    position: absolute;
+    top:      0;
+    left:     0;
+    bottom:   0;
+    right:    0;
+		background: white;
+		border-radius: 100%;
+}
+
+#dog{
+	position: relative;
+	width: 50%;
+	top: 25%;
+	left: 25%;
+}
+
+#c2inner:hover #dog {
+	animation: fullcircle 2.5s ease infinite;
+}
+
+#c3 {
+    position: absolute;
+		top: 10%;
+		left: 70%;
+    width:    10%; /* desired width */
+}
+
+#c3:before {
+    content:     "";
+    display:     block;
+    padding-top: 100%; /* initial ratio of 1:1*/
+}
+
+#c3inner {
+    position: absolute;
+    top:      0;
+    left:     0;
+    bottom:   0;
+    right:    0;
+		background: white;
+		border-radius: 100%;
+}
+
+#doge{
+	position: relative;
+	width: 75%;
+	top: 12.5%;
+	left: 12.5%;
+}
+
+#c3inner:hover #doge {
+	animation: fullcircle 2.5s ease infinite;
+}
+
+.ctext {
+	width: 100%;
+	font-size: 2em;
+	position: absolute;
+	text-align: center;
+}
+
+@keyframes fullcircle{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}

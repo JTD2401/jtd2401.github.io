@@ -191,6 +191,12 @@ body {
   left: 10px;
 }
 
+#circlesLink {
+  position: absolute;
+  top: 130px;
+  left: 10px;
+}
+
 /*Media query to make flipcard work on mobile*/
 @media only screen and (max-width: 500px) {
     body {
