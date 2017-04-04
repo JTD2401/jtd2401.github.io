@@ -197,6 +197,12 @@ body {
   left: 10px;
 }
 
+#pcLink {
+  position: absolute;
+  top: 150px;
+  left: 10px;
+}
+
 /*Media query to make flipcard work on mobile*/
 @media only screen and (max-width: 500px) {
     body {
