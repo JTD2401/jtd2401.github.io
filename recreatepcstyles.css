@@ -1,0 +1,37 @@
+*{
+  box-sizing: border-box;
+  padding-right: 0px;
+}
+
+#topHeader {
+  height: 180px;
+  background: orange;
+}
+
+#headerCenter {
+  width: 136px;
+  height: 180px;
+  margin: 0 auto;
+  display: block;
+}
+
+#headerDoge {
+  position: relative;
+  top: 40px;
+  width: 100%;
+  height: 100px;
+}
+
+#topSlideshow {
+  height: 50vh;
+}
+
+.slick-prev {
+  left: 20px;
+  z-index: 25;
+}
+
+.slick-next {
+  right: 20px;
+  z-index: 25;
+}
