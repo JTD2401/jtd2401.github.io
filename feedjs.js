@@ -19,10 +19,18 @@ request.send();
 
 request.onload = function() {
   var weatherInfo = request.response;
-  populateHeader(weatherInfo);
   showWeather(weatherInfo);
 }
 
 function showWeather(jsonWeather) {
   var cityName = jsonWeather['city_name'];
+  var windDirDay1Part1 = jsonWeather['data'][0]['wind_cdir'];
+  var windSpeedDay1Part1 = jsonWeather['data'][0]['wind_spd'];
+  var weatherIconDay1Part1 = jsonWeather['data'][0]['weather'][0];
+  var weatherCodeDay1Part1 = jsonWeather['data'][0]['weather'][1];
+  var weatherDescriptionDay1Part1 = jsonWeather['data'][0]['weather'][2];
+  var temperatureDay1Part1 = jsonWeather['data'][0]['temp'];
+
+  var windSpeedPTag = document.querySelector('#wind1P1');
+  windSpeedPTag.textContent = "Wind Speed: " + windSpeedDay1Part1;
 }
