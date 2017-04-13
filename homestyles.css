@@ -360,3 +360,19 @@ body {
   right: -25px;
   z-index: 99;
 }
+
+#meh {
+  position: relative;
+  background: #8AAAE8;
+  height: 150vh;
+}
+
+#bottomNav {
+  z-index: 200;
+  background: #E1FFFB;
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  top: 90vh;
+  left: 0;
+}

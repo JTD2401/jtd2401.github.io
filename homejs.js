@@ -19,7 +19,16 @@ $( "#bar" ).each(function() {
   window.setTimeout(barHeight, 100);
 }
 
+//Dynamically change height of project 1 div
+function projTop() {
+  $( ".proj1Div" ).each(function() {
+    $( "proj1Div" ).css('top', $("#c1").height() + 70);
+  });
+  window.setTimeout(projTop, 100);
+}
+
 barHeight();
+projTop();
 
 //Reveal info on load
 $( "#bar" ).hover(function() {
