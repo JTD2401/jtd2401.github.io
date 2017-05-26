@@ -209,6 +209,12 @@ body {
   left: 10px;
 }
 
+#v2Link {
+  position: absolute;
+  top: 190px;
+  left: 10px;
+}
+
 /*Media query to make flipcard work on mobile*/
 @media only screen and (max-width: 500px) {
     body {

@@ -245,6 +245,7 @@ body {
   animation-iteration-count: 1;
 }
 
+
 #c2inner:hover #dog {
   animation-fill-mode: forwards;
   animation-play-state: running;

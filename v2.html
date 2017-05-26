@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <!--Favicon-->
+    <link rel="icon" href="weblogo.png">
+    <!--Charset-->
+    <meta charset="UTF-8">
+    <!--Mobile Friendly Stuff-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>V2</title>
+    <!--Slick-->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <!--FontAwesome-->
+    <script src="https://use.fontawesome.com/85f6cd6809.js"></script><link rel="stylesheet" type="text/css" href="v2.css">
+  </head>
+  <body>
+    <header id="top-header">
+      <!--Visible on non-mobile-->
+      <ul id="top-bar-ul">
+        <!--First LI contains just the svg logo-->
+        <li class="tb-li"><a href="v2.html"><img src="v2name.svg" id="name-svg"></img></a><li>
+        <!--Other LI contains UL containing all links-->
+        <li class="tb-li">
+          <ul id="nav-items">
+            <li class="nav-item">About Me</li>
+            <li class="nav-item">Skills</li>
+            <li class="nav-item">Resume</li>
+            <li class="nav-item">Projects</li>
+          </ul>
+      </ul>
+      <!--Visible on mobile-->
+      <img src="jdblack.svg" id="logo"></img>
+      <!--Visible when hovered-->
+      <img src="jdgray.svg" id="hover-logo"></img>
+      <!--Dropdown when ^ is clicked-->
+      <ul id="dropdown">
+        <li class="drop-item">About Me</li>
+        <li class="drop-item">Skills</li>
+        <li class="drop-item">Resume</li>
+        <li class="drop-item">Projects</li>
+      </ul>
+    </header>
+    <main id="main-content">
+
+    </main>
+    <footer id="bottom-footer">
+
+    </footer>
+
+    <!-- JQuery-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!--Slick-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script src="v2.js"></script>
+  </body>
+</html>
